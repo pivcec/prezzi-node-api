@@ -8,6 +8,9 @@ const storage = new Storage({
 const bucketName = "prezzi";
 const bucket = storage.bucket(bucketName);
 
+const keyFile = require(`${__dirname}/google-credentials-heroku.json`);
+console.log("keyFile", keyFile);
+
 /**
  * Get public URL of a file. The file must have public access
  * @param {string} fileName
