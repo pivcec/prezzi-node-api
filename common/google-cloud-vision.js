@@ -3,7 +3,7 @@ const projectId = "Prezzi";
 const keyFilename = process.env.GCP_KEY;
 const vision = require("@google-cloud/vision");
 const client = new vision.ImageAnnotatorClient({
-  keyFileName: JSON.parse(keyFilename),
+  credentials: JSON.parse(keyFilename),
   projectId
 });
 
