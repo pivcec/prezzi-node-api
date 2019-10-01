@@ -4,6 +4,6 @@ fs.writeFile(
   `${__dirname}/google-credentials-heroku.json`,
   process.env.GOOGLE_CONFIG,
   error => {
-    throw ("error writing credentials file", error);
+    throw (error);
   }
 );
