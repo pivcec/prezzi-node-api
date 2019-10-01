@@ -6,9 +6,6 @@ const client = new vision.ImageAnnotatorClient({
   projectId
 });
 
-const keyFile = require("./google-credentials-heroku.json");
-console.log("keyFile", keyFile);
-
 exports.getVisionOcr = async url => {
   try {
     const [result] = await client.textDetection(url);

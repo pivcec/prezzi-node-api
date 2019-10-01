@@ -5,6 +5,10 @@ const storage = new Storage({
   keyFilename,
   projectId
 });
+
+const keyFile = require("./google-credentials-heroku.json");
+console.log("keyFile", keyFile);
+
 const bucketName = "prezzi";
 const bucket = storage.bucket(bucketName);
 
