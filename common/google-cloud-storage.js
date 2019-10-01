@@ -3,7 +3,10 @@ const projectId = "Prezzi";
 const keyFilename = process.env.GCP_KEY;
 console.log(keyFilename);
 const { Storage } = require("@google-cloud/storage");
-const storage = new Storage({ keyFilename, projectId });
+const storage = new Storage({
+  keyFileName: JSON.parse(keyFilename),
+  projectId
+});
 const bucketName = "prezzi";
 const bucket = storage.bucket(bucketName);
 
