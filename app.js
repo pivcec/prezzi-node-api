@@ -20,12 +20,9 @@ console.log("Express server started on port %s", server.address().port);
 app.use("/upload", uploadRouter);
 
 app.use(cors());
-app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "pug");
 app.use(logger("dev"));
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use("/img", express.static(path.join(__dirname, "public/images")));
 app.use(router);
 app.use(express.json());
 global.appRoot = path.resolve(__dirname);
