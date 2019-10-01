@@ -8,7 +8,7 @@ const storage = new Storage({
 const bucketName = "prezzi";
 const bucket = storage.bucket(bucketName);
 
-const keyFile = require(`${__dirname}/google-credentials-heroku.json`);
+const keyFile = require("../google-credentials-heroku.json");
 console.log("keyFile", keyFile);
 
 /**
