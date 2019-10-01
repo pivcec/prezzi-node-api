@@ -1,10 +1,9 @@
 const projectId = "Prezzi";
-// const keyFilename = "./conf/Prezzi-bac4d2dfc96d.json";
-const keyFilename = process.env.GCP_KEY;
+const keyFilename = "./google-credentials-heroku.json";
 console.log(keyFilename);
 const { Storage } = require("@google-cloud/storage");
 const storage = new Storage({
-  credentials: JSON.parse(keyFilename),
+  keyFilename,
   projectId
 });
 const bucketName = "prezzi";
