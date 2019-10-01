@@ -1,10 +1,7 @@
 const projectId = "Prezzi";
-const keyFilename = "../google-credentials-heroku.json";
+const keyFilename = "./google-credentials-heroku.json";
 const vision = require("@google-cloud/vision");
-const client = new vision.ImageAnnotatorClient({
-  keyFilename,
-  projectId
-});
+const client = new vision.ImageAnnotatorClient({ keyFilename, projectId });
 
 exports.getVisionOcr = async url => {
   try {
