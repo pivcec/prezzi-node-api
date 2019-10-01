@@ -1,5 +1,5 @@
 const projectId = "Prezzi";
-const keyFilename = "./google-credentials-heroku.json";
+const keyFilename = `${__dirname}/google-credentials-heroku.json`;
 const { Storage } = require("@google-cloud/storage");
 const storage = new Storage({
   keyFilename,
