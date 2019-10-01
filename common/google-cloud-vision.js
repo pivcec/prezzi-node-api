@@ -1,6 +1,5 @@
 const projectId = "Prezzi";
 const keyFilename = "./google-credentials-heroku.json";
-const keyFilename = process.env.GCP_KEY;
 const vision = require("@google-cloud/vision");
 const client = new vision.ImageAnnotatorClient({
   keyFilename,
