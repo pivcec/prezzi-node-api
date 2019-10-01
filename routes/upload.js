@@ -13,7 +13,7 @@ const multer = Multer({
   }
 });
 
-const gcsMiddlewares = require("../middlewears/google-cloud-storage");
+const gcsMiddlewares = require("../middleware/google-cloud-storage");
 const gcvHelpers = require("../common/google-cloud-vision");
 
 router.post(
